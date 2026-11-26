@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DompetKeluarga — Anggaran Rumah Tangga</title>
+<meta name="description" content="DompetKeluarga: anggaran rumah tangga yang jalan offline — rencana belanja 50/30/20, catatan pengeluaran, tujuan tabungan, dan pengingat tagihan.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#/overview"><b>DompetKeluarga</b><span>anggaran rumah tangga</span></a>
+  <nav id="main-nav" aria-label="Navigasi utama">
+    <a href="#/overview" data-route="overview">Ringkasan</a>
+    <a href="#/anggaran" data-route="anggaran">Anggaran</a>
+    <a href="#/pengeluaran" data-route="pengeluaran">Pengeluaran</a>
+    <a href="#/tabungan" data-route="tabungan">Tabungan</a>
+    <a href="#/tagihan" data-route="tagihan">Tagihan</a>
+    <a href="#/panduan" data-route="panduan">Panduan</a>
+  </nav>
+</header>
+<main class="wrap" id="app"></main>
+<footer class="wrap">
+  <p>DompetKeluarga — situs contoh yang berjalan penuh dari file statis, tanpa koneksi internet. Data contoh tersimpan di peramban Anda sendiri (localStorage) dan bisa direset kapan pun dari halaman Pengeluaran. Angka acuan di halaman Panduan bersumber dari BPS dan Pemprov DKI Jakarta.</p>
+</footer>
+<script type="module" src="main.js"></script>
+</body>
+</html>
