@@ -62,7 +62,13 @@ function render() {
   const app = document.getElementById('app');
   app.innerHTML = view.render(state);
   if (view.mount) view.mount(state, { rerender: render, save: saveState, reset: resetState });
-  window.scrollTo(0, 0);
+  // Only jump to the top when the route itself changed. Same-page updates
+  // (adding a transaction, marking a bill paid) keep the scroll position,
+  // so the user stays where they were working.
+  if (route !== render.lastRoute) {
+    window.scrollTo(0, 0);
+    render.lastRoute = route;
+  }
 }
 
 window.addEventListener('hashchange', render);
